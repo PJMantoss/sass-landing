@@ -8,6 +8,21 @@ $colors: (
     accent: #fff6bb
 ); 
 
+$padding: 15px;
+$borders: 15px;
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media(min-width: #{$desktop}){
+        @content;
+    }
+}
+
 body, html {
     height: 100%;
 }
